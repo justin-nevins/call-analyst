@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Call Analyst</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Top Bar -->
+  <div id="topbar">
+    <div id="indicator" class="idle">IDLE</div>
+    <div id="elapsed">00:00:00</div>
+    <div id="vu-meter">
+      <div id="vu-fill"></div>
+    </div>
+    <div id="chunks">0 chunks</div>
+    <div id="status">Connecting...</div>
+  </div>
+
+  <!-- Main Content -->
+  <div id="main">
+    <!-- Left Panel: Transcript -->
+    <div id="transcript-panel">
+      <div class="panel-header">Transcript</div>
+      <div id="transcript" class="panel-body"></div>
+    </div>
+
+    <!-- Right Panel: Analysis -->
+    <div id="analysis-panel">
+      <div class="panel-header">Analysis</div>
+      <div id="analysis" class="panel-body">
+        <div class="waiting">Waiting for analysis...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div id="bottombar">
+    <div id="source-selector">
+      <label>Source:</label>
+      <select id="source">
+        <option value="mic" selected>Mic</option>
+        <option value="laptop">Laptop Speakers</option>
+        <option value="dock">Dock Speakers</option>
+      </select>
+    </div>
+    <div id="controls">
+      <button id="btn-pause">Pause</button>
+      <button id="btn-save">Save</button>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
